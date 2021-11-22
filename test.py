@@ -1,15 +1,15 @@
 from selenium import webdriver
-import traceback
+from selenium.webdriver import FirefoxOptions
 from PIL import Image
 from pixelmatch.contrib.PIL import pixelmatch
 from selenium.webdriver.common.by import By
+import time
 
-firefox_options = webdriver.FirefoxOptions()
-driver = webdriver.Remote(
-    command_executor='http://selenium:4444',
-    options=firefox_options,
-)
-driver.set_window_rect(x=0, y=0, width=1920, height=1160)
+opts = FirefoxOptions()
+opts.add_argument("--headless")
+driver = webdriver.Firefox(options=opts)
+driver.set_window_position(0, 0)
+driver.set_window_size(1024, 768)
 try:
     print()
     print('Starting tests')
@@ -46,22 +46,20 @@ try:
     
     print('\t\tCheck 3: {}/1.0'.format(score))
     
-    # Task 1 - Check 4
-    driver.save_screenshot('screenshot.png')
-    screenshot = Image.open('screenshot.png')
-    original = Image.open('original.png')
-    img_diff = Image.new("RGBA", original.size)
+    # # Task 1 - Check 4 # ERROR: Causes problems needs fixing
+    # driver.save_screenshot('screenshot.png')
+    # screenshot = Image.open('screenshot.png')
+    # original = Image.open('original.png')
+    # img_diff = Image.new("RGBA", original.size)
 
-    num_diff_pixels = pixelmatch(screenshot, original, img_diff, includeAA=True)
-    difference_percentage = int((num_diff_pixels/screen_resolution) * 100)
-    score = ((100 - difference_percentage) / 100) * 5
+    # num_diff_pixels = pixelmatch(screenshot, original, img_diff, includeAA=True)
+    # difference_percentage = int((num_diff_pixels/screen_resolution) * 100)
+    # score = ((100 - difference_percentage) / 100) * 5
     
-    print('\t\tCheck 4: {}/5.0'.format(score))
+    # print('\t\tCheck 4: {}/5.0'.format(score))
     print('Tests done successfully!')
     print()
     
+finally:
     driver.quit()
-except Exception as e:
-    driver.quit()
-    print(traceback.format_exc())
     

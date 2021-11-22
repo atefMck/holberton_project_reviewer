@@ -1,0 +1,117 @@
+1637581141552	geckodriver	INFO	Listening on 127.0.0.1:58471
+1637581141560	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "44859" "-no-remote" "-profile" "/tmp/rust_mozprofilexXpaNy"
+*** You are running in headless mode.
+1637581143183	Marionette	INFO	Listening on port 42893
+1637581143266	Marionette	WARN	TLS certificate errors will be ignored for this session
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+Marionette threw an error: [Exception... "Data conversion failed because significant data would be lost"  nsresult: "0x80460003 (NS_ERROR_LOSS_OF_SIGNIFICANT_DATA)"  location: "JS frame :: resource://gre/modules/AsyncShutdown.jsm :: observe :: line 554"  data: no]
+observe@resource://gre/modules/AsyncShutdown.jsm:554:16
+observe@resource:///modules/ContentCrashHandlers.jsm:151:28
+
+1637581144473	Marionette	ERROR	[20] No reply from Marionette:Register
+1637581144517	Marionette	INFO	Stopped listening on port 42893
+1637581144553	geckodriver::marionette	ERROR	Failed to close browser connection: Socket not connected (os error 107)
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 433))
+JavaScript error: , line 0: uncaught exception: Object
+1637581296433	geckodriver	INFO	Listening on 127.0.0.1:59477
+1637581296940	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "38139" "-no-remote" "-profile" "/tmp/rust_mozprofilei28Y5u"
+*** You are running in headless mode.
+1637581298480	Marionette	INFO	Listening on port 36213
+1637581298545	Marionette	WARN	TLS certificate errors will be ignored for this session
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+Marionette threw an error: [Exception... "Data conversion failed because significant data would be lost"  nsresult: "0x80460003 (NS_ERROR_LOSS_OF_SIGNIFICANT_DATA)"  location: "JS frame :: resource://gre/modules/AsyncShutdown.jsm :: observe :: line 554"  data: no]
+observe@resource://gre/modules/AsyncShutdown.jsm:554:16
+observe@resource:///modules/ContentCrashHandlers.jsm:151:28
+
+1637581299838	Marionette	ERROR	[20] No reply from Marionette:Register
+1637581299886	Marionette	INFO	Stopped listening on port 36213
+1637581299907	geckodriver::marionette	ERROR	Failed to close browser connection: Socket not connected (os error 107)
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 433))
+JavaScript error: , line 0: uncaught exception: Object
+ExceptionHandler::GenerateDump cloned child 1133ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+
+ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Exiting due to channel error.
+1637581457857	geckodriver	INFO	Listening on 127.0.0.1:33061
+1637581457863	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "56683" "-no-remote" "-profile" "/tmp/rust_mozprofilenBbHep"
+*** You are running in headless mode.
+1637581459293	Marionette	INFO	Listening on port 40585
+1637581459368	Marionette	WARN	TLS certificate errors will be ignored for this session
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+Marionette threw an error: [Exception... "Data conversion failed because significant data would be lost"  nsresult: "0x80460003 (NS_ERROR_LOSS_OF_SIGNIFICANT_DATA)"  location: "JS frame :: resource://gre/modules/AsyncShutdown.jsm :: observe :: line 554"  data: no]
+observe@resource://gre/modules/AsyncShutdown.jsm:554:16
+observe@resource:///modules/ContentCrashHandlers.jsm:151:28
+
+1637581460537	Marionette	ERROR	[20] No reply from Marionette:Register
+1637581460574	Marionette	INFO	Stopped listening on port 40585
+1637581460590	geckodriver::marionette	ERROR	Failed to close browser connection: Socket not connected (os error 107)
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 433))
+1637581480728	geckodriver	INFO	Listening on 127.0.0.1:37961
+1637581480734	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "41937" "-no-remote" "-profile" "/tmp/rust_mozprofileE6lk2O"
+*** You are running in headless mode.
+1637581482291	Marionette	INFO	Listening on port 41823
+1637581482362	Marionette	WARN	TLS certificate errors will be ignored for this session
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+Marionette threw an error: [Exception... "Data conversion failed because significant data would be lost"  nsresult: "0x80460003 (NS_ERROR_LOSS_OF_SIGNIFICANT_DATA)"  location: "JS frame :: resource://gre/modules/AsyncShutdown.jsm :: observe :: line 554"  data: no]
+observe@resource://gre/modules/AsyncShutdown.jsm:554:16
+observe@resource:///modules/ContentCrashHandlers.jsm:151:28
+
+1637581486588	Marionette	ERROR	[20] No reply from Marionette:Register
+1637581486629	Marionette	INFO	Stopped listening on port 41823
+1637581486656	geckodriver::marionette	ERROR	Failed to close browser connection: Socket not connected (os error 107)
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 433))
+1637581502860	geckodriver	INFO	Listening on 127.0.0.1:52207
+1637581502866	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "47025" "-no-remote" "-profile" "/tmp/rust_mozprofilevzDDzn"
+*** You are running in headless mode.
+1637581504523	Marionette	INFO	Listening on port 37627
+1637581504596	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/URIFixup.jsm, line 288: NS_ERROR_FAILURE: Should pass a non-null uri
+1637581506420	Marionette	INFO	Stopped listening on port 37627
+JavaScript error: , line 0: uncaught exception: Object
+ExceptionHandler::GenerateDump cloned child 2000ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+
+ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Exiting due to channel error.
+JavaScript error: , line 0: uncaught exception: Object
+1637581550485	geckodriver	INFO	Listening on 127.0.0.1:44377
+1637581550492	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "55459" "-no-remote" "-profile" "/tmp/rust_mozprofileOxmKqd"
+*** You are running in headless mode.
+ExceptionHandler::GenerateDump cloned child 2085ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+
+ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Exiting due to channel error.
+1637581552081	Marionette	INFO	Listening on port 46215
+1637581552099	Marionette	WARN	TLS certificate errors will be ignored for this session
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+Marionette threw an error: [Exception... "Data conversion failed because significant data would be lost"  nsresult: "0x80460003 (NS_ERROR_LOSS_OF_SIGNIFICANT_DATA)"  location: "JS frame :: resource://gre/modules/AsyncShutdown.jsm :: observe :: line 554"  data: no]
+observe@resource://gre/modules/AsyncShutdown.jsm:554:16
+observe@resource:///modules/ContentCrashHandlers.jsm:151:28
+
+1637581553417	Marionette	ERROR	[20] No reply from Marionette:Register
+1637581553452	Marionette	INFO	Stopped listening on port 46215
+1637581553479	geckodriver::marionette	ERROR	Failed to close browser connection: Socket not connected (os error 107)
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 433))
+1637581594250	geckodriver	INFO	Listening on 127.0.0.1:56019
+1637581594257	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--headless" "--remote-debugging-port" "45883" "-no-remote" "-profile" "/tmp/rust_mozprofile0k1kWs"
+*** You are running in headless mode.
+1637581595691	Marionette	INFO	Listening on port 38207
+1637581595761	Marionette	WARN	TLS certificate errors will be ignored for this session
+A content process crashed and MOZ_CRASHREPORTER_SHUTDOWN is set, shutting down
+Marionette threw an error: [Exception... "Data conversion failed because significant data would be lost"  nsresult: "0x80460003 (NS_ERROR_LOSS_OF_SIGNIFICANT_DATA)"  location: "JS frame :: resource://gre/modules/AsyncShutdown.jsm :: observe :: line 554"  data: no]
+observe@resource://gre/modules/AsyncShutdown.jsm:554:16
+observe@resource:///modules/ContentCrashHandlers.jsm:151:28
+
+1637581598394	Marionette	ERROR	[20] No reply from Marionette:Register
+1637581598431	Marionette	INFO	Stopped listening on port 38207
+1637581598449	geckodriver::marionette	ERROR	Failed to close browser connection: Socket not connected (os error 107)
+JavaScript error: , line 0: uncaught exception: Object
+console.error: (new Error("SessionFile is closed", "resource:///modules/sessionstore/SessionFile.jsm", 433))
+ExceptionHandler::GenerateDump cloned child 2548ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+
+ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Exiting due to channel error.
+JavaScript error: , line 0: uncaught exception: Object
+ExceptionHandler::GenerateDump cloned child 2638ExceptionHandler::WaitForContinueSignal waiting for continue signal...
+
+ExceptionHandler::SendContinueSignalToChild sent continue signal to child
+Exiting due to channel error.

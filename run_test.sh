@@ -1,4 +1,4 @@
 #/!bin/bash
 
-sleep 5s
+sleep 5
 python test.py

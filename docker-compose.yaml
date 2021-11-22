@@ -1,19 +1,7 @@
 version: "3.9"
 services:
-  selenium:
-    image: "selenium/standalone-firefox"
-    hostname: selenium
-    ports: 
-      - "4444:4444"
-    healthcheck:
-        test: ["CMD", "curl", "-f", "http://localhost:4444"]
-        interval: 30s
-        timeout: 10s
-        retries: 5
-    logging: 
-      driver: none
   server:
-    image: python:latest
+    image: checker/server
     hostname: server
     ports:
         - "7000:7000"
@@ -21,17 +9,16 @@ services:
       context: .
       dockerfile: server.Dockerfile
       args: 
-        REPO: "https://github.com/AladinBS/holbertonschool-web_front_end/tree/main/0x06-responsive_design"
+        REPO: "https://github.com/JSalmen13/holbertonschool-web_front_end/tree/master/0x06-responsive_design"
         FOLDER: "0x06-responsive_design"
     logging: 
       driver: none
   testing:
+    image: checker/tester
     build: 
       context: .
     ports: 
       - "5500:5500"
     depends_on:
-      - selenium
       - server
-    restart: on-failure
   
