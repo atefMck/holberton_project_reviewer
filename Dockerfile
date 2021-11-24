@@ -3,10 +3,6 @@ FROM python:3.9
 ENV DEBIAN_FRONTEND noninteractive
 ENV GECKODRIVER_VER v0.30.0
 ENV FIREFOX_VER 91.0
-ARG REPO
-ARG FOLDER
-ENV REPO ${REPO}
-ENV FOLDER ${FOLDER}
  
 RUN set -x \
    && apt update \
@@ -35,10 +31,7 @@ RUN set -x \
 WORKDIR /app
 COPY . .
 RUN pip install -r ./requirements.txt
-RUN ghclone ${REPO}
-WORKDIR /app/${FOLDER}
-
 COPY ./test_suites /app/
 
-
+CMD ['bin/bash']
 

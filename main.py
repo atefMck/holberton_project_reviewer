@@ -1,15 +1,21 @@
 import os
 import sys
 import importlib
+import subprocess
 
 from http.server import HTTPServer, SimpleHTTPRequestHandler 
 from socketserver import ThreadingMixIn
 import threading
 
 PORT = 7000
-FOLDER_NAME = sys.argv[1]
+REPO_FOLDER_LINK = sys.argv[1]
+FOLDER_NAME = REPO_FOLDER_LINK[::-1].split('/')[0][::-1]
 SERVE_PATH = os.path.join('/app/', FOLDER_NAME, '')
 test = importlib.import_module('test_suites.{}.test'.format(FOLDER_NAME))
+
+print('Downloading directory..')
+subprocess.run(["gitdir", REPO_FOLDER_LINK], stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+print('Repository directory successfully downloaded')
 
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
