@@ -3,6 +3,10 @@ FROM python:3.9
 ENV DEBIAN_FRONTEND noninteractive
 ENV GECKODRIVER_VER v0.30.0
 ENV FIREFOX_VER 91.0
+ARG REPO
+ARG FOLDER
+ENV REPO ${REPO}
+ENV FOLDER ${FOLDER}
  
 RUN set -x \
    && apt update \
@@ -26,10 +30,15 @@ RUN set -x \
    && curl -sSLO https://github.com/mozilla/geckodriver/releases/download/${GECKODRIVER_VER}/geckodriver-${GECKODRIVER_VER}-linux64.tar.gz \
    && tar zxf geckodriver-*.tar.gz \
    && mv geckodriver /usr/local/bin/
- 
-COPY . /app
- 
-WORKDIR /app
 
+# Setting up server and test suits
+WORKDIR /app
+COPY . .
 RUN pip install -r ./requirements.txt
+RUN ghclone ${REPO}
+WORKDIR /app/${FOLDER}
+
+COPY ./test_suites /app/
+
+
 
