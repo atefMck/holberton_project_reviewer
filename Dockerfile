@@ -35,10 +35,7 @@ RUN set -x \
 WORKDIR /app
 COPY . .
 RUN pip install -r ./requirements.txt
-RUN ghclone ${REPO}
-WORKDIR /app/${FOLDER}
-
 COPY ./test_suites /app/
 
-
+CMD ["bin/bash"]
 

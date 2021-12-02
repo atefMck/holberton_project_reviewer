@@ -1,4 +1,4 @@
 selenium
 pixelmatch
 Pillow
-github-clone
+gitdir
