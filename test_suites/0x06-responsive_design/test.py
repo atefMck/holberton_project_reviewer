@@ -1,16 +1,18 @@
 from selenium import webdriver
-from selenium.webdriver import FirefoxOptions
+from selenium.webdriver.chrome.options import Options
 from PIL import Image
 from pixelmatch.contrib.PIL import pixelmatch
 from selenium.webdriver.common.by import By
 import time
 
 def run_test():
-    opts = FirefoxOptions()
+    opts = Options()
     opts.add_argument("--headless")
-    driver = webdriver.Firefox(options=opts)
-    driver.set_window_position(0, 0)
-    driver.set_window_size(1024, 768)
+    opts.add_argument("--window-size=1920,1080")
+    opts.add_argument("--disable-gpu")
+    opts.add_argument("--disable-dev-shm-usage")
+    opts.add_argument("--no-sandbox")
+    driver = webdriver.Chrome(options=opts)
     try:
         print()
         print('Starting tests')
@@ -47,9 +49,9 @@ def run_test():
         
         print('\t\tCheck 3: {}/1.0'.format(score))
         
-        # # Task 1 - Check 4 # ERROR: Causes problems needs fixing
-        # driver.save_screenshot('screenshot.png')
-        # screenshot = Image.open('screenshot.png')
+        # Task 1 - Check 4 # ERROR: Causes problems needs fixing
+        el = driver.find_element(By.TAG_NAME, 'body')
+        el.screenshot('screenshot.png')
         # original = Image.open('original.png')
         # img_diff = Image.new("RGBA", original.size)
 
@@ -58,7 +60,7 @@ def run_test():
         # score = ((100 - difference_percentage) / 100) * 5
         
         # print('\t\tCheck 4: {}/5.0'.format(score))
-        print('Tests done successfully!')
+        # print('Tests done successfully!')
         print()
         
     finally:
