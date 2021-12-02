@@ -2,3 +2,4 @@ geckodriver.log
 __pycache__
 .devcontainer
 .vscode
+/0x*/
