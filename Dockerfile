@@ -1,12 +1,4 @@
 FROM python:3.9
- 
-ENV DEBIAN_FRONTEND noninteractive
-ENV GECKODRIVER_VER v0.30.0
-ENV FIREFOX_VER 91.0
-ARG REPO
-ARG FOLDER
-ENV REPO ${REPO}
-ENV FOLDER ${FOLDER}
 
 # install google chrome
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
@@ -28,3 +20,4 @@ COPY . .
 RUN pip install -r ./requirements.txt
 COPY ./test_suites /app/
 
+ENTRYPOINT ["python", "main.py"]
