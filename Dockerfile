@@ -20,4 +20,4 @@ COPY . .
 RUN pip install -r ./requirements.txt
 COPY ./test_suites /app/
 
-ENTRYPOINT ["python", "main.py"]
+# ENTRYPOINT ["python", "main.py"]
